@@ -6,8 +6,8 @@ from typing import Optional, Type
 
 from environment import Environment, EnvironmentBuilder
 from ant import Ant, AntStrategy
-from random_strategy import RandomStrategy
 from common import Direction
+from strategies.random_strategy import RandomStrategy
 
 
 def load_strategy_from_file(filepath: str, verbose: bool = True) -> Type[AntStrategy]:
@@ -68,7 +68,6 @@ def add_ants(
     count: int,
     verbose: bool = True,
 ) -> None:
-
     # Create strategy based on name or load from file
     strategy = None
 
